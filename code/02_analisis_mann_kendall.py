@@ -17,6 +17,8 @@ Uso:
     python 02_analisis_mann_kendall.py
 """
 
+from pathlib import Path
+
 import pandas as pd
 from scipy import stats
 from pymannkendall import original_test
@@ -26,7 +28,12 @@ import matplotlib.pyplot as plt
 # ============================================================================
 # 1. CARGAR DATOS DESDE GEE (CSV exportado)
 # ============================================================================
-df = pd.read_csv('NDVI_Series_Temporal_2000_2025.csv')
+ROOT_DIR    = Path(__file__).parent.parent
+DATA_DIR    = ROOT_DIR / 'datos'
+RESULTS_DIR = ROOT_DIR / 'datos' / 'resultados'
+RESULTS_DIR.mkdir(exist_ok=True)
+
+df = pd.read_csv(DATA_DIR / 'NDVI_Series_Temporal_SierraNevada_2000_2025.csv')
 
 print("Datos cargados:")
 print(df.head())
@@ -110,8 +117,9 @@ for ndvi_vals, nombre in franjas:
 # 5. GUARDAR RESULTADOS EN CSV (para el artículo)
 # ============================================================================
 resultados_df = pd.DataFrame(resultados)
-resultados_df.to_csv('mann_kendall_resultados.csv', index=False)
-print("\n✓ Resultados guardados en 'mann_kendall_resultados.csv'")
+out_csv = RESULTS_DIR / 'mann_kendall_resultados.csv'
+resultados_df.to_csv(out_csv, index=False)
+print(f"\n✓ Resultados guardados en '{out_csv}'")
 
 
 # ============================================================================
@@ -131,6 +139,6 @@ plt.legend(loc='best', fontsize=11)
 plt.grid(True, alpha=0.3)
 plt.tight_layout()
 
-plt.savefig('NDVI_series_temporal.png', dpi=300)
-print("✓ Gráfica guardada en 'NDVI_series_temporal.png'")
-plt.show()
+out_png = RESULTS_DIR / 'NDVI_series_temporal.png'
+plt.savefig(out_png, dpi=300)
+print(f"✓ Gráfica guardada en '{out_png}'")
