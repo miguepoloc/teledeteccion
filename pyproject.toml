@@ -1,0 +1,37 @@
+[project]
+name = "teledeteccion"
+version = "0.1.0"
+description = "Entorno para los notebooks de Colab y scripts de Python del curso de Teledetección"
+requires-python = ">=3.12"
+dependencies = [
+    # --- Google Earth Engine ---
+    "earthengine-api==1.7.33",
+    "geemap==0.38.3",
+    # --- Datos geoespaciales ---
+    "geopandas==1.1.4",
+    "rasterio==1.5.0",
+    "shapely==2.1.2",
+    "pyproj==3.7.2",
+    "scikit-image==0.26.0",
+    # --- Análisis de datos ---
+    "numpy==2.5.1",
+    "pandas==3.0.3",
+    "polars==1.42.1",
+    "scipy==1.18.0",
+    "pymannkendall==1.4.3",
+    # --- Machine learning ---
+    "scikit-learn==1.9.0",
+    "xgboost==3.3.0",
+    # --- Descarga de imágenes satelitales ---
+    "sentinelsat==1.2.1",
+    # --- Visualización ---
+    "matplotlib==3.11.0",
+    "seaborn==0.13.2",
+    # --- Visión por computador ---
+    "opencv-python==4.11.0.86",
+    # --- Jupyter / Colab (para ejecutar los .ipynb localmente) ---
+    "jupyter==1.1.1",
+    "notebook==7.6.0",
+    "ipykernel==7.3.0",
+    "ipython==9.15.0",
+]

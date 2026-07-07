@@ -109,8 +109,10 @@ Para medir el lápiz correctamente, necesitas sacarlo del vaso primero.
    - Cobertura de nubes: menos del 10%
    - Período: enero–marzo de 2024 (temporada seca, menos nubes)
 5. Descargar el archivo .SAFE (pesa entre 600 MB y 1 GB)
-6. También descargar imágenes del mismo período para 2018 y 2015
-   (para mostrar el cambio temporal en la sesión)
+6. También descargar la imagen del mismo período para 2018
+   (para mostrar el cambio temporal en la sesión — 2018 es el año más antiguo
+   con buena disponibilidad Sentinel-2 en la zona; el satélite no existía
+   antes de junio de 2015)
 7. Guardar todo en USB para llevar al aula
 
 **Nota importante:** descarga también una imagen de la misma zona pero de la
@@ -161,9 +163,9 @@ evitar decimales — así que un valor de 1000 en SNAP equivale a reflectancia
 de 0.10 o 10%).
 
 **Por qué importa para el Artículo 1:**
-Si comparas el NDVI de una imagen de 2015 con una de 2024 sin corrección
+Si comparas el NDVI de una imagen de 2018 con una de 2024 sin corrección
 radiométrica, podrías concluir que el cultivo cambió cuando en realidad
-el sensor simplemente estaba más degradado en 2015 que en 2024.
+el sensor simplemente estaba más degradado en 2018 que en 2024.
 
 ---
 
@@ -246,13 +248,13 @@ posición geográfica correcta. Sentinel-2 L2A ya viene ortorrectificado.
 
 **Registro (Co-registration):** alinear dos imágenes de la misma zona tomadas
 en fechas diferentes para que los píxeles coincidan exactamente. Si el pixel
-(100, 200) de la imagen de 2015 corresponde a una esquina de una finca,
+(100, 200) de la imagen de 2018 corresponde a una esquina de una finca,
 el pixel (100, 200) de la imagen de 2024 debe corresponder exactamente al
 mismo punto en el suelo. Sin esto, la comparación multitemporal es imposible.
 
 **Por qué es crítico para el Artículo 1:**
-Cuando comparas NDVI de 2015 vs. 2024, si las imágenes no están perfectamente
-alineadas, un pixel que en 2015 era bosque puede corresponder a una carretera
+Cuando comparas NDVI de 2018 vs. 2024, si las imágenes no están perfectamente
+alineadas, un pixel que en 2018 era bosque puede corresponder a una carretera
 en 2024 simplemente porque la imagen está desplazada unos metros. Eso destruye
 el análisis multitemporal.
 
@@ -679,7 +681,7 @@ Grande, todo en una sola imagen.
 
 **Momento 2 — Cuando tengan el NDVI calculado:**
 Muestra en pantalla el NDVI de la imagen de 2024 junto al NDVI de la imagen
-de 2015 (que ya tienes descargada). La diferencia visual en la zona cacaotera
+de 2018 (que ya tienes descargada). La diferencia visual en la zona cacaotera
 es el "momento eureka" de la sesión: se ve cómo el NDVI cambia en ciertas
 zonas de la SNSM entre los dos años.
 

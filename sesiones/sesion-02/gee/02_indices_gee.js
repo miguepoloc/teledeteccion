@@ -105,7 +105,24 @@ function calcularIndices(imagen) {
     }
   ).rename('EVI');
 
-  return imagen.addBands([ndvi, ndwi, savi, ndre, evi]);
+  // --- NDMI (Normalized Difference Moisture Index) ---
+  // Fórmula: (B8A - B11) / (B8A + B11)
+  // Usa B8A (NIR estrecho) en vez de B8 — más sensible a humedad del dosel que el NDWI
+  // Rango: -1 a +1 | Útil para estrés hídrico y riesgo de incendio
+  var ndmi = imagen.normalizedDifference(['B8A', 'B11']).rename('NDMI');
+
+  // --- CLre (Chlorophyll Index Red Edge) ---
+  // Fórmula: (B7 / B5) - 1  →  es una RAZÓN, no una diferencia normalizada
+  // Sensible a clorofila en rangos altos donde el NDVI ya está saturado (~0.8-0.9)
+  var clre = imagen.expression(
+    '(REDGE3 / REDGE1) - 1',
+    {
+      'REDGE3': imagen.select('B7'),
+      'REDGE1': imagen.select('B5')
+    }
+  ).rename('CLre');
+
+  return imagen.addBands([ndvi, ndwi, savi, ndre, evi, ndmi, clre]);
 }
 
 // Calcular índices para ambos años
@@ -172,6 +189,20 @@ Map.addLayer(
   imagen_2024_indices.select('NDRE'),
   {min: 0, max: 0.5, palette: ['#ffffcc', '#78c679', '#238443']},
   'NDRE 2024 (contenido de clorofila)',
+  false
+);
+
+Map.addLayer(
+  imagen_2024_indices.select('NDMI'),
+  {min: -0.5, max: 0.5, palette: ['#d7191c', '#ffffbf', '#2c7bb6']},
+  'NDMI 2024 (humedad del dosel)',
+  false
+);
+
+Map.addLayer(
+  imagen_2024_indices.select('CLre'),
+  {min: 0, max: 3, palette: ['#ffffcc', '#78c679', '#238443']},
+  'CLre 2024 (clorofila red edge)',
   false
 );
 
