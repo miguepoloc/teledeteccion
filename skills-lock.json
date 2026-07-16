@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "cli-anything-qgis": {
+      "source": "hkuds/cli-anything",
+      "sourceType": "github",
+      "skillPath": "skills/cli-anything-qgis/SKILL.md",
+      "computedHash": "f7a33391723e07b97fc323967acca081b070a074412d004630a425106449424b"
+    },
+    "geospatial-data-pipeline": {
+      "source": "erichowens/some_claude_skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/geospatial-data-pipeline/SKILL.md",
+      "computedHash": "64d28d233f7a164d766d180f268189ff21be325f2e1b3cd0dcb31d83436684a5"
+    },
+    "gis": {
+      "source": "vamseeachanta/workspace-hub",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/_archive/gis/SKILL.md",
+      "computedHash": "3e0864a5f61e2207f30acd4f5dc80c514b5de632c473324c551aa51949418422"
+    }
+  }
+}
