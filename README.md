@@ -89,7 +89,7 @@ Los análisis cubren el cambio de cobertura café → cacao entre 2015 y 2024.
 
 ## Referencia docente anterior
 
-Los notebooks de la Dra. Claudia Imbett (AGROSAVIA) están en la carpeta [`referencia/`](referencia/).
+Los notebooks están en la carpeta [`referencia/`](referencia/).
 Son la base técnica sobre la que se construyeron los laboratorios de este curso.
 
 ---

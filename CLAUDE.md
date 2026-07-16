@@ -49,7 +49,7 @@ sesiones/sesion-0N/     — one folder per course session (N = 1..4, weekends Ju
 articulos/               — write-ups of the 4 research papers the course is built around
 code/                    — standalone GEE+Python pipeline for Artículo 1 (NDVI trend analysis)
 datos/                   — shared datasets (DEM, shapefiles, sample Sentinel-2 .SAFE products)
-referencia/              — prior instructor's (Dra. Claudia Imbett) original notebooks — read-only inspiration, not maintained
+referencia/              — notebooks — read-only inspiration, not maintained
 00-Curso/                — the master syllabus (docx) driving session-by-session pacing
 ```
 

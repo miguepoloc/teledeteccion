@@ -1,6 +1,6 @@
 # Material de Referencia — Docente Anterior
 
-Este directorio contiene los notebooks originales de la **Dra. Claudia Imbett (AGROSAVIA)**,
+Este directorio contiene los notebooks originales del
 docente anterior de este curso. Son la base técnica sobre la que se construyeron los
 laboratorios del curso actual.
 

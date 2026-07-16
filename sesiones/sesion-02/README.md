@@ -1,23 +1,14 @@
 # Sesión 2 — Imágenes Pasivas, Preprocesamiento, Índices y Laboratorio
-**Sábado 18 de julio de 2026 · 8:00 AM – 6:00 PM (SNAP puede extenderse más allá de las 18:00)**
+**Sábado 18 de julio de 2026 · 8:00 AM – 6:00 PM**
 Maestría en Ingeniería — Universidad del Magdalena
 
 ---
 
 ## Dos tipos de laboratorio en esta sesión
 
-1. **Docente presenta → estudiante replica en su propio SNAP.** Todo lo que
-   está en `snap/guia_snap_paso_a_paso.md`. El docente hace la demo paso a
-   paso en pantalla grande y cada estudiante repite los mismos pasos en su
-   computador con los 4 archivos que el docente distribuyó por USB. **Ya no
-   es "solo observar"** — el objetivo es que cada estudiante termine con su
-   propio NDVI, NDWI y SAVI calculados, y haya visto con sus manos la
-   diferencia TOA/BOA, el problema de las nubes y el cambio 2018→2024. No hay
-   límite de tiempo estricto — sigue hasta que el grupo termine, aunque se
-   extienda más allá de las 18:00.
-2. **Estudiante hace solo, sin acompañamiento paso a paso.** Los 5 notebooks
-   de la carpeta `colab/` (13:00–17:30) — trabajo individual guiado por el
-   propio notebook, con el docente circulando para resolver dudas.
+1. **GEE + Python (Colab) — el laboratorio principal.** Los 5 notebooks de la carpeta `colab/` (13:00–17:30) — trabajo individual guiado por el propio notebook, con el docente circulando para resolver dudas. **Todo el curso puede completarse en GEE+Python sin necesidad de SNAP.**
+
+2. **SNAP — demo del docente + práctica opcional.** A la 1:00 PM (paralelo al inicio de Colab 00), el docente ejecuta en pantalla la guía SNAP paso a paso. Los estudiantes pueden replicar en su propio computador si tienen SNAP instalado. **Es opcional** — si no tienen SNAP o da problemas, todo lo que se hace en SNAP está también disponible en los notebooks Colab como alternativa completa.
 
 Además, el docente tiene una tercera carpeta, `docente/`, con **demos que solo
 él ejecuta y proyecta** durante los bloques teóricos (no son laboratorios que
@@ -36,13 +27,13 @@ el estudiante replique en el momento, aunque puede revisarlos después).
 | 10:45 – 12:00 | Índices espectrales: NDVI, NDWI, SAVI, NDRE, EVI, NDMI, CLre | Teoría | — |
 | 12:00 – 13:00 | Almuerzo | — | — |
 | 13:00 – 13:30 | Introducción Python y Google Colab | Práctica individual | Colab 00 |
+| 13:00 – 14:30 | **SNAP (opcional)** — docente en pantalla, estudiante replica si tiene SNAP | Demo + réplica opcional | SNAP |
 | 13:30 – 14:30 | Google Earth Engine desde cero | Práctica individual | Colab 01 |
 | 14:30 – 15:30 | NDVI satelital sobre la SNSM | Práctica individual | Colab 02 |
 | 15:30 – 15:45 | Pausa | — | — |
 | 15:45 – 16:30 | NDVI con shapefiles — zona cacaotera | Práctica individual | Colab 03 |
 | 16:30 – 17:30 | Todos los índices + cambio temporal 2018→2024 | Práctica individual | Colab 04 |
 | 17:30 – Bloque 5 (teoría) | Clasificación de imágenes | Teoría + demo docente | `docente/gee/03_clasificacion_no_supervisada.js` |
-| Tras el Bloque 5 | Laboratorio SNAP — docente presenta, estudiante replica (12 pasos, sin límite estricto de tiempo) | Práctica guiada | SNAP |
 | Cierre | Resumen + tarea | Plenaria | — |
 
 ---
@@ -61,17 +52,23 @@ como comparación multitemporal.
 
 ---
 
-## Laboratorio SNAP — docente presenta, estudiante replica
+## Laboratorio SNAP — demo del docente (opcional para el estudiante)
 
 Guía completa: [`snap/guia_snap_paso_a_paso.md`](snap/guia_snap_paso_a_paso.md).
 
-12 pasos: apertura de imagen, exploración de bandas, color natural, falso
+El docente hace la demo de los 12 pasos en pantalla a las **13:00 PM** mientras los estudiantes
+empiezan los notebooks. Quiénes tengan SNAP instalado pueden replicar en paralelo.
+Todo lo que SNAP hace en los 12 pasos está replicado también en los notebooks Colab:
+**nadie se queda sin poder hacer el laboratorio por un problema de instalación.**
+
+> **Nota:** si tienes problemas con SNAP en macOS con chip Apple Silicon (M1/M2/M3),
+> es un problema conocido de compatibilidad de Java. Usa directamente los notebooks Colab.
+
+Los 12 pasos cubren: apertura de imagen, exploración de bandas, color natural, falso
 color, NDVI, NDWI y SAVI con Band Math, subset, exportar GeoTIFF, comparación
 TOA (L1C) vs. BOA (L2A), comparación con nubes vs. sin nubes + enmascaramiento
 con la banda SCL, y comparación NDVI multitemporal 2018 vs. 2024 (el "momento
-eureka" del laboratorio). Cada estudiante repite estos pasos en su propio
-computador con los 4 archivos entregados por USB — no hay problema si alguien
-termina después que el grupo.
+eureka" del laboratorio).
 
 ---
 
@@ -79,13 +76,16 @@ termina después que el grupo.
 
 Ejecuta los notebooks **en orden**. Cada uno construye sobre el anterior.
 
+> **Prerequisito:** haber completado el notebook de introducción a Python de la Sesión 1
+> (`sesion-01/colab/01_intro_python.ipynb`) antes de llegar hoy.
+
 | Notebook | Qué aprenderás | Abrir en Colab |
 |----------|---------------|----------------|
-| [00_intro_python_jupyter.ipynb](colab/00_intro_python_jupyter.ipynb) | Python desde cero: variables, operaciones, gráficos | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/miguepoloc/teledeteccion-maestria/blob/main/sesiones/sesion-02/colab/00_intro_python_jupyter.ipynb) |
-| [01_intro_gee_python.ipynb](colab/01_intro_gee_python.ipynb) | GEE desde cero: autenticación, primer mapa, cargar Sentinel-2 | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/miguepoloc/teledeteccion-maestria/blob/main/sesiones/sesion-02/colab/01_intro_gee_python.ipynb) |
-| [02_ndvi_satelital.ipynb](colab/02_ndvi_satelital.ipynb) | Calcular NDVI sobre imagen Sentinel-2 de la SNSM | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/miguepoloc/teledeteccion-maestria/blob/main/sesiones/sesion-02/colab/02_ndvi_satelital.ipynb) |
-| [03_ndvi_con_shapefiles.ipynb](colab/03_ndvi_con_shapefiles.ipynb) | NDVI recortado a la zona cacaotera con polígono | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/miguepoloc/teledeteccion-maestria/blob/main/sesiones/sesion-02/colab/03_ndvi_con_shapefiles.ipynb) |
-| [04_indices_espectrales_snsm.ipynb](colab/04_indices_espectrales_snsm.ipynb) | NDVI, NDWI, NDRE, SAVI, EVI, NDMI, CLre + cambio 2018→2024 | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/miguepoloc/teledeteccion-maestria/blob/main/sesiones/sesion-02/colab/04_indices_espectrales_snsm.ipynb) |
+| [00_descarga_copernicus.ipynb](colab/00_descarga_copernicus.ipynb) | *(Opcional)* Descargar imágenes Sentinel-2 vía API — fallback si no hay USB | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/miguepoloc/teledeteccion/blob/main/sesiones/sesion-02/colab/00_descarga_copernicus.ipynb) |
+| [01_intro_gee_python.ipynb](colab/01_intro_gee_python.ipynb) | GEE desde cero: autenticación, primer mapa, cargar Sentinel-2 | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/miguepoloc/teledeteccion/blob/main/sesiones/sesion-02/colab/01_intro_gee_python.ipynb) |
+| [02_ndvi_satelital.ipynb](colab/02_ndvi_satelital.ipynb) | Calcular NDVI sobre imagen Sentinel-2 de la SNSM | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/miguepoloc/teledeteccion/blob/main/sesiones/sesion-02/colab/02_ndvi_satelital.ipynb) |
+| [03_ndvi_con_shapefiles.ipynb](colab/03_ndvi_con_shapefiles.ipynb) | NDVI recortado a la zona cacaotera con polígono | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/miguepoloc/teledeteccion/blob/main/sesiones/sesion-02/colab/03_ndvi_con_shapefiles.ipynb) |
+| [04_indices_espectrales_snsm.ipynb](colab/04_indices_espectrales_snsm.ipynb) | NDVI, NDWI, NDRE, SAVI, EVI, NDMI, CLre + cambio 2018→2024 | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/miguepoloc/teledeteccion/blob/main/sesiones/sesion-02/colab/04_indices_espectrales_snsm.ipynb) |
 
 ---
 
@@ -164,8 +164,9 @@ Si prefieres trabajar en el Code Editor de GEE en lugar de Colab, el script
 
 - Computador con Chrome o Firefox actualizado
 - Cuenta Google con acceso a Colab y GEE
-- Conexión a internet estable
-- **SNAP instalado y funcionando** (obligatorio, ya no es opcional — es el
-  laboratorio hands-on de esta sesión): https://step.esa.int
+- Conexión a internet estable (Colab y GEE son el laboratorio principal)
+- **SNAP instalado** *(opcional — ver demo del docente a las 13:00)*: https://step.esa.int
+  - Si SNAP no instala o da errores, usa los notebooks Colab — hacen exactamente lo mismo
 - Carpeta de datos entregada por el docente (USB o disco compartido) con los
-  4 archivos `.SAFE` — ver `docente/COMO_DESCARGAR_DATOS_COPERNICUS.md`
+  4 archivos `.SAFE` — **solo necesaria si replicar SNAP**
+  - Alternativa sin USB: todos los datos se cargan desde GEE en los notebooks

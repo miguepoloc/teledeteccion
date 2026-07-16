@@ -370,6 +370,17 @@ normalizada te dice qué tan diferente es la señal. El NDVI hace eso entre
 dos bandas del espectro: qué tan diferente es la respuesta en NIR vs. en Rojo.
 Cuando esa diferencia es grande, hay vegetación. Cuando es pequeña, no hay.
 
+**Referencia científica — Diapositiva 03 (bloque NDVI):**
+> Tucker, C.J. (1979). Red and photographic infrared linear combinations for
+> monitoring vegetation. *Remote Sensing of Environment*, 8(2), 127–150.
+> https://doi.org/10.1016/0034-4257(79)90013-0
+> La formalización del NDVI en revista indexada. >20.000 citas en Scopus.
+> **Esta es la cita que debes usar en la diapositiva del NDVI y en las tesis.**
+
+> Rouse, J.W., Haas, R.H., Schell, J.A. & Deering, D.W. (1973). Monitoring
+> vegetation systems in the Great Plains with ERTS. *Third ERTS Symposium*,
+> NASA SP-351, 309–317. [Referencia histórica, no indexada en Scopus]
+
 ---
 
 ### NDWI — Normalized Difference Water Index
@@ -402,6 +413,18 @@ Este es el índice clave para estimar si el dosel del cacao tiene condiciones
 de humedad que favorecen la esporulación de Moniliasis. Un NDWI alto sostenido
 durante el período húmedo indica dosel con mucha agua acumulada — exactamente
 las condiciones que favorecen a *M. roreri*.
+
+**Referencia científica — Diapositiva 03 (bloque NDWI):**
+> Gao, B.C. (1996). NDWI — A normalized difference water index for remote sensing
+> of vegetation liquid water from space. *Remote Sensing of Environment*, 58(3), 257–266.
+> https://doi.org/10.1016/S0034-4257(96)00067-3
+> La versión NIR-SWIR del NDWI para humedad foliar. **Esta es la que usamos en agricultura.**
+
+> McFeeters, S.K. (1996). The use of normalized difference water index (NDWI) in
+> the delineation of open water features. *International Journal of Remote Sensing*, 17(7).
+> https://doi.org/10.1080/01431169608948714
+> La versión Verde-NIR para delinear cuerpos de agua (no para humedad foliar).
+> Citar ambas si en la diapositiva distingues los dos usos del índice.
 
 ---
 
@@ -474,6 +497,13 @@ completamente el suelo. En cacao adulto con dosel denso, el NDVI funciona
 bien. En cacao recién sembrado o en zonas de transición donde aún se ve
 suelo entre las plantas, el SAVI da resultados más precisos.
 
+**Referencia científica — Diapositiva 03 (bloque SAVI):**
+> Huete, A.R. (1988). A Soil-Adjusted Vegetation Index (SAVI).
+> *Remote Sensing of Environment*, 25(3), 295–309.
+> https://doi.org/10.1016/0034-4257(88)90106-X
+> El artículo original del SAVI. Define el factor L y su valor estándar (0.5).
+> **Incluir DOI en la diapositiva del SAVI.**
+
 ---
 
 ### EVI — Enhanced Vegetation Index
@@ -496,6 +526,33 @@ El EVI corrige dos problemas del NDVI:
 En bosques tropicales densos y sistemas agroforestales con dosel muy cerrado —
 exactamente como el cacao de la SNSM. En esas condiciones el NDVI se satura
 y el EVI sigue siendo sensible a diferencias de vigor.
+
+**Referencia científica — Diapositiva 03 (bloque EVI):**
+> Huete, A. et al. (2002). Overview of the radiometric and biophysical performance
+> of the MODIS vegetation indices. *Remote Sensing of Environment*, 83(1–2), 195–213.
+> https://doi.org/10.1016/S0034-4257(02)00096-2
+> El artículo que define el EVI y lo valida globalmente. Citar junto al NDVI
+> cuando el estudiante mencione el problema de saturación en dosel denso.
+
+---
+
+### CLre — Chlorophyll Index Red Edge
+
+**Fórmula:**
+```
+CLre = (B7 / B5) - 1
+```
+Usa las bandas Red Edge de Sentinel-2 para estimar el contenido de clorofila relativo.
+
+**Ventaja:** no se satura en doseles densos y correlaciona directamente con la concentración de
+clorofila foliar, lo que lo hace más preciso que el NDVI para detección de estrés nutricional.
+
+**Referencia científica — Diapositiva 03 (bloque CLre):**
+> Gitelson, A.A., Gritz, Y. & Merzlyak, M.N. (2003). Relationships between leaf
+> chlorophyll content and spectral reflectance and algorithms for non-destructive
+> chlorophyll assessment in higher plant leaves. *Journal of Plant Physiology*,
+> 160(3), 271–282. https://doi.org/10.1078/0176-1617-00887
+> Define el índice CLre. **Esencial citarla si el CLre aparece en la tesis.**
 
 ---
 
