@@ -14,7 +14,7 @@ Material de clases, laboratorios y scripts de investigación para la asignatura 
 
 ### Opción A — Clonar en tu computador (recomendado)
 ```bash
-git clone https://github.com/miguepoloc/teledeteccion-maestria.git
+git clone https://github.com/miguepoloc/teledeteccion.git
 ```
 
 ### Opción B — Abrir directamente en Google Colab

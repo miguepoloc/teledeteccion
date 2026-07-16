@@ -43,53 +43,51 @@ Para el **docente**, en cambio, varios bloques sí tienen una demo real que se p
 
 Los documentos en `teoria/` cubren cada bloque de la clase:
 
-| Archivo | Bloque |
-|---------|--------|
-| `Remote_Sensing_Fundamentals.pdf` | Bloques 1–2 |
-| `Radiation_Matter_Interaction.pdf` | Bloque 3 |
-| `Orbital_Spectral_Fingerprinting.pdf` | Bloque 4 |
-| `Remote_Sensing_Systems_and_Resolutions.pdf` | Bloque 5 |
-| `Sensores_de_Teledetección.pdf` | Bloque 6 |
-| `Teledetección_Aplicada_al_Caribe.pdf` | Contexto regional |
+| Archivo | Bloque | Tema |
+|---------|--------|------|
+| [`teoria/01 - Teledetección.pdf`](teoria/01%20-%20Teledetección.pdf) | Bloque 1 | ¿Qué es la teledetección? Sensores proximales vs. remotos |
+| [`teoria/02 - Espectro electromagnético.pdf`](teoria/02%20-%20Espectro%20electromagnético.pdf) | Bloque 2 | El espectro EM: visible, NIR, SWIR, radar |
+| [`teoria/03 - Radiación con la materia.pdf`](teoria/03%20-%20Radiación%20con%20la%20materia.pdf) | Bloque 3 | Reflexión, absorción, transmisión, ventanas atmosféricas |
+| [`teoria/04 - Firmas espectrales.pdf`](teoria/04%20-%20Firmas%20espectrales.pdf) | Bloque 4 | Firmas espectrales de vegetación, agua, suelo, urbano |
+| [`teoria/05 - Conceptos básicos.pdf`](teoria/05%20-%20Conceptos%20básicos.pdf) | Bloque 5 | Resoluciones espacial, espectral, radiométrica y temporal |
+| [`teoria/06 - Plataformas satelitales.pdf`](teoria/06%20-%20Plataformas%20satelitales.pdf) | Bloque 6 | Sentinel-2, Sentinel-1, Landsat, MODIS, P4M |
+| [`teoria/07 - Resumen final.pdf`](teoria/07%20-%20Resumen%20final.pdf) | Cierre | Síntesis de la sesión |
 
 ---
 
 ## Demos del docente durante la teoría (en vivo)
 
-Estas demos **las ejecuta el docente en pantalla** durante los bloques teóricos correspondientes — los estudiantes no las corren hoy, solo observan y participan respondiendo las preguntas guía. Cada una tiene una versión en **GEE Code Editor (JavaScript)**, la más rápida de improvisar entre bloques de 30-40 min, y una versión equivalente en **Python/Colab** por si prefieres proyectar Python.
+Estas demos **las ejecuta el docente en pantalla** durante los bloques teóricos. Los estudiantes **no las corren hoy** — solo observan y participan. Cada una tiene versión GEE (JavaScript) y versión Python/Colab equivalente en la carpeta **`docente/colab/`** para que el docente la proyecte o el estudiante la repase después en casa.
 
-### Bloque 3+4 — Explorador de firmas espectrales
+> **Para el estudiante:** en la Sesión 2 sí correrás tus propios notebooks. Hoy solo observas.
+
+### Demo de apertura + cierre — Visualización SNSM
+
+- GEE: [`gee/01_visualizacion_snsm.js`](gee/01_visualizacion_snsm.js)
+- Colab: [`docente/colab/01_visualizacion_snsm.ipynb`](docente/colab/01_visualizacion_snsm.ipynb)
+
+La primera imagen que ve el grupo: la Sierra Nevada en color natural, falso color NIR y composición SWIR. Incluye extracción de valores de pixel y firma espectral en vivo.
+
+### Demo Bloque 3+4 — Explorador de firmas espectrales
 
 - GEE: [`gee/02_firmas_espectrales.js`](gee/02_firmas_espectrales.js)
-- Colab: [`colab/02_firmas_espectrales.ipynb`](colab/02_firmas_espectrales.ipynb)
+- Colab: [`docente/colab/02_firmas_espectrales.ipynb`](docente/colab/02_firmas_espectrales.ipynb)
 
-En GEE, cada clic sobre el mapa (vegetación, agua, suelo) agrega en vivo una curva de reflectancia al gráfico — la "huella dactilar" del Bloque 4 se vuelve literal. La versión Colab usa tres coordenadas fijas dentro de la zona cacaotera (ajustables la noche antes de la clase).
+En GEE, cada clic sobre el mapa agrega en vivo una curva de reflectancia. La versión Colab grafica tres puntos fijos (vegetación, agua, suelo) dentro de la zona cacaotera.
 
-### Bloque 5 — Resolución espacial y temporal
+### Demo Bloque 5 — Resolución espacial y temporal
 
 - GEE: [`gee/03_resoluciones_espacial_temporal.js`](gee/03_resoluciones_espacial_temporal.js)
-- Colab: [`colab/03_resoluciones_espacial_temporal.ipynb`](colab/03_resoluciones_espacial_temporal.ipynb)
+- Colab: [`docente/colab/03_resoluciones_espacial_temporal.ipynb`](docente/colab/03_resoluciones_espacial_temporal.ipynb)
 
-Tres mapas sincronizados (Sentinel-2 10 m / Landsat 30 m / MODIS 250 m) sobre la misma zona cacaotera — al hacer zoom en clase, los estudiantes ven en qué imagen se "pierden" los polígonos de las fincas. Incluye además un conteo real de cuántas imágenes hay disponibles de cada satélite en el mismo mes (resolución temporal) y un bonus de resolución radiométrica (12 bits vs. 3 bits).
+Tres mapas sincronizados (Sentinel-2 10 m / Landsat 30 m / MODIS 250 m). Al hacer zoom, los estudiantes ven en qué imagen se “pierden” los polígonos de las fincas.
 
-### Bloque 6 — Óptico (Sentinel-2) vs. radar (Sentinel-1)
+### Demo Bloque 6 — Óptico (Sentinel-2) vs. Radar (Sentinel-1)
 
 - GEE: [`gee/04_optico_vs_sar.js`](gee/04_optico_vs_sar.js)
-- Colab: [`colab/04_optico_vs_sar.ipynb`](colab/04_optico_vs_sar.ipynb)
+- Colab: [`docente/colab/04_optico_vs_sar.ipynb`](docente/colab/04_optico_vs_sar.ipynb)
 
-Muestra la misma zona del norte del Magdalena en temporada de lluvias: Sentinel-2 sale cubierto de nubes, Sentinel-1 (SAR) entrega la escena limpia el mismo mes. Hace tangible la diferencia entre sensor pasivo y activo, y por qué el Caribe colombiano necesita radar.
-
----
-
-## Demo de cierre — GEE en vivo (10 min)
-
-Al final de la sesión el docente abrirá el script [`gee/01_visualizacion_snsm.js`](gee/01_visualizacion_snsm.js) en el **Google Earth Engine Code Editor** y mostrará en pantalla:
-
-1. La Sierra Nevada de Santa Marta en **color natural** (como la ve el ojo humano)
-2. La misma zona en **falso color** (NIR en el canal rojo) — la vegetación aparece roja brillante
-3. La zona cacaotera entre Ciénaga y Fundación, Magdalena
-
-**Para los estudiantes:** solo observen. En la Sesión 2 ustedes ejecutarán este tipo de visualizaciones.
+La misma zona en temporada de lluvias: Sentinel-2 cubierto de nubes, Sentinel-1 SAR entrega la escena limpia. Hace tangible la diferencia sensor pasivo vs. activo.
 
 ---
 
@@ -106,10 +104,20 @@ Al final de la sesión el docente abrirá el script [`gee/01_visualizacion_snsm.
 
 ---
 
-## Tarea para la Sesión 2 (sábado)
+## Tarea para la Sesión 2 (sábado 8 AM)
 
-1. Registrarse en **Copernicus Data Space**: https://browser.dataspace.copernicus.eu
-2. Buscar una imagen Sentinel-2 L2A de la zona de Ciénaga/Fundación con < 10% de nubes
-3. Revisar cuántas bandas tiene y cuánto pesa el archivo
+### ✅ Obligatorio antes de llegar
 
-*(No necesitas descargar nada — solo explorar la interfaz)*
+1. **Completar el notebook de Python** [`colab/01_intro_python.ipynb`](colab/01_intro_python.ipynb) ← **30–45 min, en casa esta noche**
+   - Variables, listas, bucles, funciones y gráficos en Python
+   - Prerequisito para entender los notebooks de GEE del sábado
+   - No requiere instalación — corre directamente en [Google Colab](https://colab.research.google.com)
+
+2. **Registrarse en Copernicus Data Space**: https://browser.dataspace.copernicus.eu
+   - Crear cuenta gratuita
+   - Buscar una imagen Sentinel-2 L2A de Ciénaga/Fundación con < 10% nubes
+
+### 📚 Lectura recomendada (opcional)
+
+Chuvieco, E. (2016). *Fundamentals of Satellite Remote Sensing* (2nd ed.). CRC Press.
+Capítulos 1 y 2 — repasan todo lo de la clase de hoy con más detalle.

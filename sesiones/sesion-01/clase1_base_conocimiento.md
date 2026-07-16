@@ -191,6 +191,21 @@ La luz visible (0.5 μm) es del tamaño de las gotitas, por eso las nubes la blo
 
 ---
 
+**Referencia científica — Diapositiva 02 (ventanas atmosféricas):**
+> Liou, K.N. (2002). *An Introduction to Atmospheric Radiation* (2nd ed.). Academic Press.
+> El texto de referencia estándar sobre interacción radiación-atmósfera. Define las ventanas
+> atmosféricas formalmente. Cita cuando expliques por qué Sentinel-2 tiene sus bandas donde las tiene.
+
+> Vermote, E.F., Tanré, D., Deuze, J.L., Herman, M. & Morcrette, J.J. (1997).
+> Second simulation of the satellite signal in the solar spectrum (6S): an overview.
+> *IEEE Transactions on Geoscience and Remote Sensing*, 35(3), 675–686.
+> https://doi.org/10.1109/36.581987
+> El algoritmo 6S es el modelo de transferencia radiativa que subyace a muchos procesadores
+> de corrección atmosférica. Puedes citar esta referencia en la diapositiva de corrección
+> atmosférica de sesión 2 para dar solidez académica al concepto de ventanas atmosféricas.
+
+---
+
 ## BLOQUE 3 — Interacción de la radiación con la materia (30 minutos)
 
 ### Los tres comportamientos fundamentales
@@ -230,6 +245,19 @@ en las bandas del visible e infrarrojo. ¿Por qué? Porque el agua absorbe mucho
 y SWIR, y la reflexión especular va en otra dirección que no es hacia el satélite.
 Eso es exactamente lo que hace funcionar el NDWI — el agua absorbe en NIR mientras
 la vegetación refleja mucho, entonces el contraste es enorme.
+
+---
+
+**Referencia científica — Diapositiva 03 (interacción radiación-materia):**
+> Jensen, J.R. (2015). *Introductory Digital Image Processing: A Remote Sensing Perspective*
+> (4th ed.). Pearson/Prentice Hall. Capítulo 3.
+> El capítulo 3 de Jensen es el referente estándar para reflexión especular vs. difusa
+> y los tres comportamientos de la radiación. Esencial para maestría.
+
+> Schowengerdt, R.A. (2007). *Remote Sensing: Models and Methods for Image Processing*
+> (3rd ed.). Academic Press. Capítulo 2.
+> Para profundizar en los modelos de reflexión de Lamberto y Fresnel. Nivel avanzado;
+> útil si algún estudiante quiere modelar la radiometría en su tesis.
 
 ---
 
@@ -296,7 +324,29 @@ la imagen en reflectancia real comparable con la biblioteca espectral.
 
 ---
 
-## BLOQUE 5 — Conceptos básicos: sensor, plataforma, resolución (40 minutos)
+**Referencia científica — Diapositiva 04 (firmas espectrales):**
+> Ustin, S.L. & Gamon, J.A. (2010). Remote sensing of plant functional types.
+> *New Phytologist*, 186(4), 795–816. https://doi.org/10.1111/j.1469-8137.2010.03284.x
+> Revisión definitiva sobre cómo las propiedades optícas de las plantas varían por especie,
+> estado fenológico y estrés. Excelente para explicar por qué cacao y café tienen firmas similares.
+
+> Jacquemoud, S. & Baret, F. (1990). PROSPECT: a model of leaf optical properties spectra.
+> *Remote Sensing of Environment*, 34(2), 75–91. https://doi.org/10.1016/0034-4257(90)90100-Z
+> El modelo físico que explica la firma espectral de la vegetación desde la estructura
+> celular. Muestra por qué el NIR refleja tanto (el mesofílo esponjoso) y el rojo absorbe
+> (la clorofila). **Poner en la diapositiva de firma espectral de la vegetación** como nota al pie.
+
+> Datt, B. (1998). Remote sensing of chlorophyll a, chlorophyll b, chlorophyll a+b
+> and total carotenoid content in eucalyptus leaves.
+> *Remote Sensing of Environment*, 66(2), 111–121.
+> https://doi.org/10.1016/S0034-4257(98)00046-7
+> Muestra las diferencias de firma espectral entre plantas con distintos niveles de
+> clorofila. Til para justificar por qué la degradación de clorofila (como en Moniliasis)
+> es detectable espectralmente.
+
+---
+
+## BLOQUE 5 — Las cuatro resoluciones: sensor, plataforma, resolución (40 minutos)
 
 ### El sistema de teledetección: tres componentes
 
@@ -487,6 +537,20 @@ para detectar si las condiciones del dosel están cambiando hacia el riesgo.
 
 ---
 
+**Referencia científica — Diapositiva 05 (resoluciones):**
+> Chuvieco, E. (2016). *Fundamentals of Satellite Remote Sensing: An Environmental Approach*
+> (2nd ed.). CRC Press. Capítulos 2 y 3.
+> El texto en español de referencia para teledeteccion en Latinoamérica. Cubre los cuatro
+> tipos de resolución con ejemplos. **Poner en la primera diapositiva del bloque 5.**
+
+> Wulder, M.A. et al. (2022). Fifty years of Landsat science and impacts.
+> *Remote Sensing of Environment*, 280, 113195.
+> https://doi.org/10.1016/j.rse.2022.113195
+> Revisión del impacto de 50 años de Landsat. Útil para hablar del trade-off
+> resolución espacial vs. temporal y por qué Sentinel-2 complementa a Landsat.
+
+---
+
 ## BLOQUE 6 — Plataformas satelitales clave (20 minutos)
 
 ### Las plataformas que usarás en el curso
@@ -524,6 +588,26 @@ para detectar si las condiciones del dosel están cambiando hacia el riesgo.
 - Gratuito en GEE
 - Mejor para: monitoreo global, incendios, temperatura, fenología a gran escala
 - Limitación: demasiado grueso para análisis a nivel de parcela
+
+**Referencia científica — Diapositiva 06 (plataformas):**
+> Drusch, M. et al. (2012). Sentinel-2: ESA’s Optical High-Resolution Mission for GMES
+> Operational Services. *Remote Sensing of Environment*, 120, 25–36.
+> https://doi.org/10.1016/j.rse.2011.11.026
+> El paper oficial de Sentinel-2. Define las 13 bandas, los 3 niveles de resolución espacial
+> y el diseño de la misión. **Incluir el DOI en la diapositiva de Sentinel-2** como pie de página.
+
+> Torres, R. et al. (2012). GMES Sentinel-1 mission. *Remote Sensing of Environment*, 120, 9–24.
+> https://doi.org/10.1016/j.rse.2011.05.028
+> El paper oficial de Sentinel-1. Define las características del SAR y los modos de operación.
+> **Incluir en la diapositiva de Sentinel-1** junto a la analogía del radar del aeropuerto.
+
+> Moreira, A. et al. (2013). A tutorial on synthetic aperture radar.
+> *IEEE Geoscience and Remote Sensing Magazine*, 1(1), 6–43.
+> https://doi.org/10.1109/MGRS.2013.2248301
+> La revisión más accesible de SAR para principiantes. Recomendada como lectura de apoyo
+> en la diapositiva del Bloque 6 para quienes quieran profundizar en el SAR.
+
+---
 
 ### Tabla comparativa para memorizar
 
