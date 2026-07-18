@@ -51,11 +51,12 @@ var longitudes_onda = [490, 560, 665, 705, 740, 783, 842, 865, 1610, 2190];
 // PASO 2: INTERFAZ — MAPA + PANEL DE GRÁFICO
 // ----------------------------------------------------------------------------
 var mapa = ui.Map();
+mapa.style().set({stretch: 'both'});
 mapa.centerObject(zona_busqueda_agua, 10);
 mapa.addLayer(imagen, {bands: ['B8', 'B4', 'B3'], min: 0, max: 4000},
   'Falso color NIR (referencia para elegir dónde hacer clic)');
 
-var panelGrafico = ui.Panel({style: {width: '420px', padding: '8px'}});
+var panelGrafico = ui.Panel({style: {width: '420px', padding: '8px', stretch: 'vertical'}});
 panelGrafico.add(ui.Label('Firma espectral (haz clic en el mapa)', {fontWeight: 'bold', fontSize: '16px'}));
 panelGrafico.add(ui.Label('Clic sobre vegetación, agua y suelo desnudo para comparar.', {fontSize: '12px', color: '666666'}));
 
@@ -68,7 +69,11 @@ panelGrafico.add(botonLimpiar);
 var contenedorGrafico = ui.Panel();
 panelGrafico.add(contenedorGrafico);
 
-var panelPrincipal = ui.Panel({widgets: [mapa, panelGrafico], layout: ui.Panel.Layout.Flow('horizontal')});
+var panelPrincipal = ui.Panel({
+  widgets: [mapa, panelGrafico],
+  layout: ui.Panel.Layout.Flow('horizontal'),
+  style: {stretch: 'both'}
+});
 ui.root.clear();
 ui.root.add(panelPrincipal);
 
