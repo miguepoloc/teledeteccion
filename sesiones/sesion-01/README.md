@@ -108,7 +108,7 @@ La misma zona en temporada de lluvias: Sentinel-2 cubierto de nubes, Sentinel-1 
 
 ### ✅ Obligatorio antes de llegar
 
-1. **Completar el notebook de Python** [`colab/01_intro_python.ipynb`](colab/01_intro_python.ipynb) ← **30–45 min, en casa esta noche**
+1. **Completar el notebook de Python** [`colab/00_intro_python.ipynb`](colab/00_intro_python.ipynb) ← **30–45 min, en casa esta noche**
    - Variables, listas, bucles, funciones y gráficos en Python
    - Prerequisito para entender los notebooks de GEE del sábado
    - No requiere instalación — corre directamente en [Google Colab](https://colab.research.google.com)

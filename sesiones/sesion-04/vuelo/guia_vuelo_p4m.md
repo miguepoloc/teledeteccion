@@ -1,7 +1,11 @@
 # Guía de Vuelo — DJI Phantom 4 Multispectral
 ## Sesión 4 | Universidad del Magdalena | Sábado 25 Jul 2026
 
-> Esta guía es para el docente. Cúbrela paso a paso frente a los estudiantes antes de encender el drone.
+> Esta guía es para el docente. Cúbrela paso a paso frente a los estudiantes
+> antes de encender el drone — las secciones 1 a 6 se hacen **una sola vez**,
+> al inicio de la jornada. La sección 7 (rotación de vuelo por grupos) se
+> **repite en cada turno**, porque varios grupos pequeños se van rotando el
+> pilotaje sobre este mismo P4M, en vez de un solo vuelo continuo del docente.
 > El objetivo no es ser piloto — es entender el flujo completo desde misión hasta dato.
 
 ---
@@ -14,6 +18,8 @@
 - [ ] Instalar/actualizar DJI Pilot en el tablet/teléfono del control remoto
 - [ ] Descargar el área de vuelo en DJI Pilot para uso offline
 - [ ] Preparar el panel de calibración (ver sección 3)
+- [ ] Si el grupo va a usar GCPs, preparar los marcadores (ver sección 4)
+- [ ] Confirmar cuántas baterías hay frente a cuántos grupos van a rotar el vuelo (sección 7) — si no alcanza una por grupo, prepara un cargador para tenerlo corriendo desde el inicio
 
 ---
 
@@ -21,7 +27,7 @@
 
 | Parámetro | Valor |
 |-----------|-------|
-| Cámara multiespectral | 5 bandas individuales (Blue, Green, Red, RedEdge, NIR) |
+| Cámara multiespectral | 6 bandas individuales (RGB, Blue, Green, Red, RedEdge, NIR) |
 | Resolución por banda | 1600 × 1300 px (2.08 MP) |
 | Sensor de luz solar | Integrado (sunshine sensor en la tapa) |
 | Altura recomendada | 50–100 m AGL |
@@ -65,9 +71,48 @@ DJI_0001_D.TIF       ← Datos del sunshine sensor (luz ambiental)
 
 > **Nota:** El sunshine sensor del P4M realiza corrección de iluminación automática. El panel es para calibración cuantitativa (valores de reflectancia absoluta). Para este lab introductorio, si no tienes el panel, el sunshine sensor es suficiente.
 
+Esta calibración se hace **una vez al inicio de la jornada** y sirve para
+todos los vuelos del día (todas las rotaciones de la sección 7), mientras la
+luz no cambie drásticamente — un cambio de nublado a despejado (o
+viceversa) sí amerita recalibrar.
+
 ---
 
-## 4. Checklist de seguridad — ANTES de encender
+## 4. Colocación y medición de GCPs (opcional)
+
+> Esta sección solo aplica si el grupo decidió usar GCPs (Ground Control
+> Points) para mayor precisión de posicionamiento — ver Bloque 3. Para el
+> laboratorio de aprendizaje de hoy, el error de 1.5–3 m del GPS estándar
+> del P4M es aceptable sin GCPs. Si tu grupo no los va a usar, sáltate esta
+> sección y sigue con la sección 5.
+
+### Qué son y para qué sirven
+
+Puntos de control terrestre — marcadores visibles distribuidos por el área
+de vuelo, fotografiables claramente desde el aire, cuyas coordenadas exactas
+se miden **una sola vez** en el suelo. WebODM usa esas coordenadas durante
+el procesamiento (Bloque 7, Paso 1) para ajustar todo el ortomosaico y bajar
+el error de posición de 1.5–3 m a **2–5 cm** (Bloque 3).
+
+### Procedimiento
+
+1. Coloca entre 4 y 6 marcadores (placas blanco-y-negro, cruces pintadas, o
+   material similar de alto contraste) distribuidos por el área de vuelo
+2. Con un GPS RTK de mano o equipo topográfico, mide la coordenada exacta de
+   cada marcador — **una sola vez**, antes del primer despegue de la
+   rotación
+3. Anota las coordenadas en una tabla (nombre del marcador, latitud,
+   longitud, altura)
+4. Al cargar las fotos a WebODM (Bloque 7, Paso 1), carga también el
+   archivo de coordenadas de los GCPs junto con las fotos del vuelo
+
+> Define **antes de la rotación de vuelos** (sección 7) quién coloca y mide
+> los GCPs — no a mitad de la rotación, para no detener a los grupos que ya
+> están volando.
+
+---
+
+## 5. Checklist de seguridad — ANTES de encender
 
 **Área:**
 - [ ] Inspeccionar visualmente el área de vuelo (personas, cables eléctricos, árboles altos)
@@ -87,9 +132,13 @@ DJI_0001_D.TIF       ← Datos del sunshine sensor (luz ambiental)
 - [ ] Return-to-Home (RTH) configurado a 50 m de altura
 - [ ] Batería baja programada en 30% (RTH automático)
 
+> Con varias rotaciones de grupos (sección 7), este checklist de equipo se
+> repite completo cada vez que entra una batería nueva — no solo al inicio
+> del día.
+
 ---
 
-## 5. Planificación de la misión en DJI Pilot
+## 6. Planificación de la misión en DJI Pilot
 
 ### Parámetros para el vuelo en la universidad
 
@@ -114,9 +163,70 @@ Tiempo estimado:   ~20–25 min (1 batería)
 7. Toca **Upload** para cargar la misión al drone
 8. Toca **Start** — el drone despega y vuela solo
 
+> Esta misión se planifica **una sola vez**. Si cada grupo va a volar sobre
+> la misma área (más simple de coordinar) puedes reutilizarla en cada
+> rotación de la sección 7; si cada grupo vuela sobre un área distinta (más
+> rico para comparar resultados), repite este procedimiento para cada una.
+
 ---
 
-## 6. Durante el vuelo
+## 7. Rotación de vuelo por grupos
+
+Con varios grupos pequeños rotando el pilotaje sobre este mismo P4M —y sus
+baterías disponibles—, la lógica cambia frente a un vuelo único y continuado
+del docente.
+
+### Cómo organizar la rotación
+
+1. Divide la clase en grupos pequeños antes de salir al campo
+2. Cada grupo tiene una ventana corta: briefing de turno (2 min), despegue y
+   vuelo asistido por el docente (el grueso del tiempo), aterrizaje y
+   entrega (2 min)
+3. **Mientras un grupo vuela, el grupo que acaba de aterrizar ya puede
+   empezar a descargar sus fotos y prepararse para lanzar WebODM** — no hay
+   tiempo muerto. El grupo que sigue hace su briefing de turno mientras
+   tanto
+4. Si el número de baterías es menor al número de grupos, algún grupo va a
+   volar con una batería que ya usó otro grupo — ten un cargador corriendo
+   desde la sección 1
+
+### Perímetro de seguridad (aplica a cada rotación, sin excepción)
+
+| Zona | Distancia | Quién puede estar ahí |
+| --- | --- | --- |
+| Perímetro de seguridad | 15 m alrededor del drone, durante despegue y aterrizaje | Nadie cruza esa línea |
+| Zona de observación | 20 m del punto de despegue | El resto del grupo, en un área designada |
+| Observador visual | Al lado del docente | 1 acompañante del grupo en turno — rota con cada grupo |
+
+### Qué decir mientras cada grupo vuela
+
+El drone vuela en modo automático — tienes tiempo de hablar con el grupo en turno.
+
+Mientras vuela la primera pasada:
+> "¿Ven cómo vuela en líneas rectas paralelas? Eso se llama patrón
+> *lawnmower* o de cortacésped. Es el patrón óptimo para garantizar que cada
+> metro del terreno aparezca en varias fotos desde distintos ángulos. El
+> software tiene que ver el mismo punto desde al menos 3 posiciones
+> diferentes para calcular su posición 3D."
+
+Cuando el drone gira para la segunda pasada:
+> "En este momento están ocurriendo 5 disparos simultáneos — una foto por
+> cada cámara espectral. El drone está capturando luz a 450, 560, 650, 730 y
+> 840 nanómetros al mismo tiempo. Ustedes están viendo en tiempo real las 6
+> cámaras disparando juntas — en un rato, cuando bajen las fotos, van a ver
+> con sus propios ojos el corrimiento entre bandas que expliqué en la
+> teoría (Bloque 4) — no es teoría abstracta, es literalmente lo que su
+> propio dron acaba de capturar."
+
+Si algún estudiante pregunta qué pasa si se cae la batería:
+> "El P4M tiene Return-to-Home automático cuando la batería baja del 30%.
+> Calcula la distancia al punto de despegue, la energía necesaria para
+> regresar, y si ve que le queda justa, vuelve solo. Esa función ha salvado
+> muchos drones."
+
+---
+
+## 8. Durante el vuelo
 
 - Mantente siempre en línea de visión con el drone (VLOS — Visual Line of Sight)
 - Ten el control en mano para intervenir si es necesario
@@ -125,25 +235,25 @@ Tiempo estimado:   ~20–25 min (1 batería)
 
 ---
 
-## 7. Después del vuelo
+## 9. Después del vuelo (cada rotación)
 
-1. Vuelve a poner el drone en el suelo y toma las **fotos post-vuelo del panel** de calibración
+1. Vuelve a poner el drone en el suelo y toma las **fotos post-vuelo del panel** de calibración (solo la primera y la última rotación del día — no hace falta repetirlo en cada grupo, ver sección 3)
 2. Retira la batería antes de apagar el control
-3. Saca la tarjeta SD y copia las fotos al computador
-4. Organiza los archivos en carpetas:
+3. Saca la tarjeta SD y copia las fotos del grupo al computador
+4. Organiza los archivos en carpetas, una por grupo:
 
 ```
-vuelo_universidad_2026-07-25/
-├── calibracion_pre/        ← fotos del panel antes del vuelo
-├── fotos_mision/           ← todas las DJI_XXXX_MS_*.TIF
-└── calibracion_post/       ← fotos del panel después del vuelo
+vuelo_universidad_2026-07-25_grupoX/
+├── calibracion_pre/        ← fotos del panel antes del vuelo (solo primera rotación)
+├── fotos_mision/           ← todas las DJI_XXXX_MS_*.TIF de este grupo
+└── calibracion_post/       ← fotos del panel después del vuelo (solo última rotación)
 ```
 
-5. Carga las fotos a WebODM para procesamiento (ver guía WebODM)
+5. Carga las fotos de este grupo a WebODM para procesamiento (ver guía WebODM, y Bloque 7 Paso 1)
 
 ---
 
-## 8. Qué mostrar y decir a los estudiantes durante el vuelo
+## 10. Qué mostrar y decir a los estudiantes antes del primer despegue
 
 **Antes de despegar:**
 > "Este drone tiene 5 cámaras independientes, cada una captura una longitud de onda diferente del espectro. Cuando lo ven despegar, cada segundo que vuela está tomando 5 fotos simultáneas — una por banda. Al final del vuelo tendremos miles de imágenes pequeñas que el software va a unir como un rompecabezas para formar el mapa completo."

@@ -12,10 +12,10 @@
 |------|------|-----------|
 | 18:00–18:15 | Apertura | Mini-caso docente: tesis Bonivento 2024 — película de agua en hojas de banano |
 | 18:15–19:15 | Teoría | Índices avanzados: NDRE, EVI, NDMI, LAI — fórmulas, interpretación, aplicaciones |
-| 19:15–19:45 | Lab Colab | **Notebook 05** — Índices avanzados en zona cacaotera/bananera (GEE) |
+| 19:15–19:45 | Lab Colab | **Notebook 00** — Índices avanzados en zona cacaotera/bananera (GEE) |
 | 19:45–20:00 | Pausa | — |
 | 20:00–20:45 | Teoría | Clasificación supervisada: ROIs, Random Forest, entrenamiento, validación |
-| 20:45–21:30 | Lab Colab | **Notebook 06** — Clasificación supervisada con GEE + scikit-learn |
+| 20:45–21:30 | Lab Colab | **Notebook 01** — Clasificación supervisada con GEE + scikit-learn |
 | 21:30–22:00 | Proyecto | Avance S3: cada estudiante presenta 2 min su área de estudio y pregunta de investigación |
 
 ---
@@ -24,8 +24,9 @@
 
 | # | Archivo | Tema | Abrir |
 |---|---------|------|-------|
-| 05 | [05_indices_avanzados_lai.ipynb](colab/05_indices_avanzados_lai.ipynb) | NDRE, EVI, NDMI, LAI en cultivos | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU-USUARIO/teledeteccion/blob/main/sesiones/sesion-03/colab/05_indices_avanzados_lai.ipynb) |
-| 06 | [06_clasificacion_supervisada.ipynb](colab/06_clasificacion_supervisada.ipynb) | Clasificación supervisada RF + validación | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU-USUARIO/teledeteccion/blob/main/sesiones/sesion-03/colab/06_clasificacion_supervisada.ipynb) |
+| 00 | [00_indices_avanzados_lai.ipynb](colab/00_indices_avanzados_lai.ipynb) | NDRE, EVI, NDMI, LAI en cultivos | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU-USUARIO/teledeteccion/blob/main/sesiones/sesion-03/colab/00_indices_avanzados_lai.ipynb) |
+| 01 | [01_clasificacion_supervisada.ipynb](colab/01_clasificacion_supervisada.ipynb) | Clasificación supervisada RF + validación | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU-USUARIO/teledeteccion/blob/main/sesiones/sesion-03/colab/01_clasificacion_supervisada.ipynb) |
+| 02 | [02_series_temporales_ndvi.ipynb](colab/02_series_temporales_ndvi.ipynb) | Series temporales NDVI/NDRE 2018–2024 + Mann-Kendall | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU-USUARIO/teledeteccion/blob/main/sesiones/sesion-03/colab/02_series_temporales_ndvi.ipynb) |
 
 > Reemplaza `TU-USUARIO` con tu usuario de GitHub antes de publicar.
 
@@ -66,10 +67,12 @@
 
 | Tema | Referencia |
 |------|-----------|
-| Índices espectrales en cultivos tropicales | Chuvieco (2002) Cap. 5 |
-| Random Forest para clasificación de imagen | Breiman (2001); Jensen (2007) Cap. 9 |
-| Matriz de confusión y Kappa | Congalton & Green (2009) |
-| Red Edge en detección de estrés hídrico | Delegido et al. (2011), RSE |
+| Índices espectrales en cultivos tropicales | Chuvieco (2016) Cap. 5; Tucker (1979) RSE 8(2) |
+| Random Forest para clasificación | Breiman (2001); Belgiu & Drăguț (2016) ISPRS 114 |
+| Matriz de confusión y Kappa | Congalton (1991); Congalton & Green (2009) |
+| Red Edge y estrés hídrico | Filella & Penuelas (1994) IJRS 15(7) |
+| Moniliasis en cacao con teledetección | Moreira da Cruz Trevizan et al. (2022) CEA 193 |
+| EVI y dosel denso | Huete et al. (2002) RSE 83(1–2) |
 
 ---
 

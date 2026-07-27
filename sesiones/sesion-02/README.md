@@ -77,7 +77,7 @@ eureka" del laboratorio).
 Ejecuta los notebooks **en orden**. Cada uno construye sobre el anterior.
 
 > **Prerequisito:** haber completado el notebook de introducción a Python de la Sesión 1
-> (`sesion-01/colab/01_intro_python.ipynb`) antes de llegar hoy.
+> (`sesion-01/colab/00_intro_python.ipynb`) antes de llegar hoy.
 
 | Notebook | Qué aprenderás | Abrir en Colab |
 |----------|---------------|----------------|

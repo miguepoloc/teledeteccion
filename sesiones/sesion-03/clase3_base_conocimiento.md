@@ -17,10 +17,10 @@
 |------|--------|------|
 | 18:00 – 18:15 | Apertura: mini-caso desde tu propia tutoría | Teoría |
 | 18:15 – 19:15 | Índices avanzados: NDRE, EVI, NDMI, LAI | Teoría |
-| 19:15 – 19:45 | Notebook 05: índices avanzados en GEE | Lab Colab |
+| 19:15 – 19:45 | Notebook 00: índices avanzados en GEE | Lab Colab |
 | 19:45 – 20:00 | Pausa | — |
 | 20:00 – 20:45 | Clasificación supervisada: ROIs, Random Forest, validación | Teoría |
-| 20:45 – 21:30 | Notebook 06: clasificación supervisada con GEE + scikit-learn | Lab Colab |
+| 20:45 – 21:30 | Notebook 01: clasificación supervisada con GEE + scikit-learn | Lab Colab |
 | 21:30 – 22:00 | Avance de proyecto: presentaciones orales de 2 min | Proyecto |
 
 ---
@@ -176,11 +176,11 @@ LAI ≈ −ln((0.69 − NDVI) / 0.59) / 0.91
 
 ---
 
-## BLOQUE 2 — Notebook 05 (30 minutos)
+## BLOQUE 2 — Notebook 00 (30 minutos)
 
 ### Cómo presentarlo antes de abrir el notebook
 
-*"Van a abrir el Notebook 05 en Colab. Vamos a calcular NDRE, NDMI, EVI y LAI sobre la zona bananera del Norte del Magdalena con Sentinel-2 de Ene–Mar 2024. También vamos a hacer algo específico de la tesis Bonivento: comparar el NDMI en temporada seca vs lluvia — para ver si el satélite detecta las diferencias de hidratación foliar que Marcelo midió en el experimento controlado."*
+*"Van a abrir el Notebook 00 en Colab. Vamos a calcular NDRE, NDMI, EVI y LAI sobre la zona bananera del Norte del Magdalena con Sentinel-2 de Ene–Mar 2024. También vamos a hacer algo específico de la tesis Bonivento: comparar el NDMI en temporada seca vs lluvia — para ver si el satélite detecta las diferencias de hidratación foliar que Marcelo midió en el experimento controlado."*
 
 ### Errores típicos de los estudiantes en este notebook
 
@@ -301,11 +301,11 @@ La escala que van a ver en la literatura (Landis & Koch, 1977):
 
 ---
 
-## BLOQUE 5 — Notebook 06 (45 minutos)
+## BLOQUE 5 — Notebook 01 (45 minutos)
 
 ### Cómo presentarlo antes de abrir el notebook
 
-*"Van a entrenar un clasificador Random Forest con 5 clases sobre el Norte del Magdalena: agua, suelo desnudo, pastizal, cultivos (banano/cacao) y bosque. El modelo usará 7 bandas de Sentinel-2 más 5 índices espectrales — los mismos que calculamos en el Notebook 05. Al final van a tener un mapa de cobertura del suelo con su matriz de confusión y su Kappa."*
+*"Van a entrenar un clasificador Random Forest con 5 clases sobre el Norte del Magdalena: agua, suelo desnudo, pastizal, cultivos (banano/cacao) y bosque. El modelo usará 7 bandas de Sentinel-2 más 5 índices espectrales — los mismos que calculamos en el Notebook 00. Al final van a tener un mapa de cobertura del suelo con su matriz de confusión y su Kappa."*
 
 *"Y van a ver algo interesante: qué variable le importa más al Random Forest para clasificar. Spoiler basado en la tesis Bonivento: el NIR y los índices que lo involucran suelen dominar — porque el NIR es el que más varía entre coberturas."*
 
@@ -353,11 +353,11 @@ Di esto antes de que salgan:
 ### Lo que debes tener abierto antes de las 18:00
 - La foto de la hoja de banano con película de agua (`pelicula de agua 2.jpeg` en la carpeta de la tesis) en pantalla
 - El gráfico de separabilidad JM de la tesis (`fig_tesis_03_separabilidad_jm.png`) listo para mostrar cuando expliques por qué NIR_G ganó
-- Colab con el Notebook 05 precargado y autenticado en GEE (comprueba que funciona antes de clase)
+- Colab con el Notebook 00 precargado y autenticado en GEE (comprueba que funciona antes de clase)
 - El script GEE `03_clasificacion_gee.js` en una pestaña del Code Editor
 
 ### Plan B si el internet falla o GEE no responde
-El Notebook 05 genera una imagen de ejemplo sintética automáticamente si no puede conectarse a GEE — los estudiantes hacen los cálculos de índices sobre esa imagen simulada. El aprendizaje del código es idéntico; solo cambia el dato.
+El Notebook 00 genera una imagen de ejemplo sintética automáticamente si no puede conectarse a GEE — los estudiantes hacen los cálculos de índices sobre esa imagen simulada. El aprendizaje del código es idéntico; solo cambia el dato.
 
 ### Conexión explícita con las otras sesiones
 - S2 → S3: "el sábado pasado calcularon NDVI con SNAP y en GEE — hoy van más profundo"

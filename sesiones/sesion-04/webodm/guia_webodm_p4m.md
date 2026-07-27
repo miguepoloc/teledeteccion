@@ -129,7 +129,7 @@ Cuando termine, haz clic en el proyecto y luego en **Download**:
 
 ### Paso 5: Crear stack multibanda para Python
 
-WebODM exporta bandas separadas. Para el Notebook 07 necesitamos un solo GeoTIFF con 5 bandas. Ejecuta esto en terminal una vez descargados los archivos:
+WebODM exporta bandas separadas. Para el Notebook 00 necesitamos un solo GeoTIFF con 5 bandas. Ejecuta esto en terminal una vez descargados los archivos:
 
 ```bash
 # Instalar GDAL si no está disponible
@@ -147,7 +147,7 @@ gdal_merge.py -separate \
 echo "Stack creado: ortomosaico_p4m_5bandas.tif"
 ```
 
-O desde Python con rasterio (Notebook 07 lo hace automáticamente si los archivos están separados).
+O desde Python con rasterio (Notebook 00 lo hace automáticamente si los archivos están separados).
 
 ---
 
@@ -174,7 +174,7 @@ Mismo procedimiento que con el vuelo de la universidad, pero:
 - Usar mismos parámetros de procesamiento
 - El resultado será el dato de tu investigación CONCAPAN 2022
 
-> Las imágenes de la bananera son el dataset de investigación real. El análisis Python del Notebook 07-08 aplica sobre el dataset de la universidad (obtenido en clase), pero la misma metodología aplica exactamente sobre las imágenes del bananal.
+> Las imágenes de la bananera son el dataset de investigación real. El análisis Python del Notebook 00-01 aplica sobre el dataset de la universidad (obtenido en clase), pero la misma metodología aplica exactamente sobre las imágenes del bananal.
 
 ---
 
